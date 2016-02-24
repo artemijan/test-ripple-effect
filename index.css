@@ -7,7 +7,7 @@ button {
     overflow: hidden;
 }
 
-button:after {
+button .ripple {
     content: '';
     display: block;
     position: absolute;
@@ -34,17 +34,17 @@ button:after {
     }
 }
 
-button:not(:active):after {
+button:not(:active) .ripple {
     animation: ripple 1s ease-out;
 }
 
 /* fixes initial animation run, without user input, on page load.
  */
-button:after {
+button .ripple {
     visibility: hidden;
 }
 
-button:focus:after {
+button:focus .ripple {
     visibility: visible;
 }
 
